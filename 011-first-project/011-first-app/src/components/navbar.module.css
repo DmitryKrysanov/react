@@ -1,0 +1,20 @@
+.nav {
+    grid-area: n;
+    background-color: #13CE66;
+    border-right: 10px solid #fff;
+    }
+    
+    .nav ul {
+      list-style: none;
+      padding: 0 0 0 20px;
+    }
+    
+    .nav li {
+      height: 30px;
+    }
+    
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+    }    

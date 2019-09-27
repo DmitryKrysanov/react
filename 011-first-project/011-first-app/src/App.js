@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/header';
+import Navbar from './components/navbar';
+import Profile from './components/profile';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
-      <div>
+      <div className="app-wrapper"> 
         <Header />
-      </div>
+        <Navbar />
+        <Profile />
+        </div>
     );
   }
-}
 
 export default App;

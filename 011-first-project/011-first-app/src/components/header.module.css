@@ -1,6 +1,10 @@
 .header {
-    width: 1024px;
-    height: 60px;
-    background-color: aqua;
-    margin: auto;
+    grid-area: h;
+    background-color: #13CE66;
+    padding: 10px;
+    border-bottom: 10px solid #fff;
+}
+  
+.header img {
+    height: 40px;
 }

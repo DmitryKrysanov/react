@@ -1,0 +1,26 @@
+
+.content {
+    grid-area: c;
+  }
+  
+  .banner {
+    width: 100%;
+  }
+  
+  .user-info {
+    padding-top: 10px;
+    display: flex;
+  }
+  
+  .avatar {
+    width: 160px;
+  }
+  
+  .info {
+    padding-left: 20px;
+  }
+  
+  .info ul {
+    list-style: none;
+    padding-left: 0;
+  }
