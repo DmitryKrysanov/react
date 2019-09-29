@@ -1,11 +1,13 @@
 import React from 'react';
 import classes from './navbar.module.css';
 
+console.log(classes);
+
 const Navbar = () => {
     return (
     <nav className={classes.nav}>
           <ul>
-            <li><a href="#">Profile</a></li>
+            <li className={classes.active}><a href="#">Profile</a></li>
             <li><a href="#">Messages</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Music</a></li>
@@ -14,5 +16,7 @@ const Navbar = () => {
         </nav>
     )
 }
+
+//multiple classes: className={`${classes.nav} ${classes.active}`}
 
 export default Navbar;
