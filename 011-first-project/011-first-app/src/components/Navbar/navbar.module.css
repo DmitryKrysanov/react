@@ -1,29 +1,30 @@
-.nav {
+.sidebar {
     grid-area: n;
     background-color: #13CE66;
     border-right: 10px solid #fff;
-    height: 100vh;
-    }
-    
-    .nav ul {
-      list-style: none;
-      padding: 0 8px 0 8px;
-    }
-    
-    .nav li {
-      padding: 16px;
-      height: 24px;
-    }
-    
-    .nav a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-      line-height: 24px;
-      padding: 8px 0 8px 0;
-    }    
+}
 
-    .active {
-      background-color: cadetblue;
-      border-radius: 8px;
-    }
+.nav {}
+
+.nav ul {
+    list-style: none;
+    padding: 0 8px 0 8px;
+}
+
+.nav li {
+    padding: 16px;
+    height: 24px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 0 8px 0;
+}
+
+.active {
+    background-color: cadetblue;
+    border-radius: 8px;
+}
