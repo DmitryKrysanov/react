@@ -2,6 +2,7 @@
     grid-area: n;
     background-color: #13CE66;
     border-right: 10px solid #fff;
+    height: 100vh;
 }
 
 .nav {}
@@ -27,4 +28,12 @@
 .active {
     background-color: cadetblue;
     border-radius: 8px;
+}
+
+.friends h3 {
+    color: #fff;
+}
+
+.friendsList {
+    display: flex;
 }
