@@ -1,54 +1,28 @@
 import React from 'react';
-import classes from './Dialogs.module.css';
-import DialogItem from './DialogItem/DialogItem';
-import Message from './Message/Message';
 import {addMessageActionCreator, updateNewMessageTextActionCreator} from '../../Redux/dialogs-reducer';
+import Dialogs from './Dialogs';
 
 const DialogsContainer = (props) => {
 
-    let dialogsElements = props.state.dialogsData
-    .map( dialog => <DialogItem name={dialog.name} id={dialog.id} avatar={dialog.avatar} />) 
-
-    let messagesElements = props.state.messagesData
-    .map( message => <Message message={message.message} id={message.id} /> )
-
-    let newMessageElement = React.createRef();
+    let state = props.store.getState();
 
     let sendMessage = () => {
-    props.dispatch(addMessageActionCreator());
+    props.store.dispatch(addMessageActionCreator());
     }
 
-    let onMessageChange = () => {
-        let text = newMessageElement.current.value;
+    let onMessageChange = (text) => {
         let action = updateNewMessageTextActionCreator(text);
-        props.dispatch(action);
-
-        // console.log(action);
+        props.store.dispatch(action);
     }
 
     return (
-        <div className={classes.dialogs}>
-            <div className={classes.dialogs_items}>
-                {dialogsElements}
-            </div>
-            <div className={classes.messages}>
-                {messagesElements}
-                <div>
-                <textarea 
-                className={classes.textarea} 
-                placeholder='Write a message...'
-                ref={newMessageElement} 
-                onChange={onMessageChange}>
-                </textarea>
-                <div className={classes.button} onClick={sendMessage}>
-                    <h4>Send</h4>
-                </div>
-            </div>
-        </div>
-            
-        </div>
+        <Dialogs updateNewMessageText={onMessageChange} 
+        onSendMessage={sendMessage}
+        newMessageText={state.messagesPage.newMessageText}
+        dialogs={state.messagesPage.dialogsData}
+        messages={state.messagesPage.messagesData}/>
         
     )
 }
 
-export default Dialogs;
+export default DialogsContainer;
