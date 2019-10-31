@@ -2,18 +2,19 @@ import React from 'react';
 import classes from './Users.module.css';
 import * as axios from 'axios';
 
+
 const Users = (props) => {
-    debugger;
+
     if (props.users.length === 0) {
         axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-     
-            props.setUsers();
-        });
+            props.setUsers(response.data.users);
+        })
     }
-    debugger;
+   
+ 
     return <div>
         {
-            props.users.map(user => <div key='user.id'>
+            props.users.map(user => <div key={user.id}>
                 <span>
                     <div>
                         <img className={classes.avatar} src={user.avatar} />
