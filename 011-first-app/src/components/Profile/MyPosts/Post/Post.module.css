@@ -1,0 +1,22 @@
+.post {
+    height: 64px;
+    padding: 8px 0 8px 0;
+    display: flex;
+}
+
+.post img {
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.postInfo {
+    
+}
+
+
+.post p {
+    line-height: 48px;
+    margin: 0;
+}
